@@ -243,7 +243,7 @@ a {
   text-decoration: underline;
 }
 a:hover {
-  color: #15967d;
+  color: #fff;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -3422,15 +3422,28 @@ textarea.form-control-lg {
   background-color: transparent;
 }
 
-.btn-outline-light {
+.btn-outline-dark {
   color: #212529;
   border-color: #212529;
+  border-width: 0.2rem;
+}
+.btn-outline-dark:hover {
+  color: #f8f9fa;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.btn-outline-light {
+  color: #fd7e14;
+  border-color: #fd7e14;
+  border-width: 0.2rem;
 }
 .btn-outline-light:hover {
-  color: #000;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  color: #f8f9fa;
+  background-color: #fd7e14;
+  border-color: #fd7e14;
 }
+
 .btn-check:focus + .btn-outline-light, .btn-outline-light:focus {
   box-shadow: 0 0 0 0.25rem rgba(248, 249, 250, 0.5);
 }
@@ -11351,9 +11364,9 @@ html {
 .btn-social {
   border-radius: 100%;
   display: inline-flex;
-  width: 3.25rem;
-  height: 3.25rem;
-  font-size: 1.25rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
   justify-content: center;
   align-items: center;
 }
@@ -11438,7 +11451,7 @@ html {
 .masthead {
   /*padding-top: calc(6rem + 74px);*/
   padding-top: calc(6rem + 0px);
-  padding-bottom: 6rem;
+  padding-bottom: 7rem;
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
@@ -11457,7 +11470,7 @@ html {
 @media (min-width: 992px) {
   .masthead {
     /*padding-top: calc(6rem + 104px);*/
-    padding-bottom: 6rem;
+    padding-bottom: 5.5rem;
   }
   .masthead .masthead-heading {
     font-size: 4rem;
