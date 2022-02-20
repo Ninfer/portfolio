@@ -5603,6 +5603,9 @@ textarea.form-control-lg {
   flex: 1 1 auto;
   padding: 1rem;
   background-color: #212529;
+  
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
 }
 
 .modal-footer {
