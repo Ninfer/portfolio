@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Space Invaders Girocompleto</title>
+    <!--Algunos elementos de CSS para la ejecución del Juego de la Vida-->
+    <style>
+        h1, h2, h3, h4, h5, h6, p, label, output
+        {
+            color: white;
+            text-align: center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+
+        canvas
+        {
+            position:absolute;
+            left:0;
+            top:0;
+            right:0;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        legend
+        {
+            text-align: left;
+            color: yellow;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        /*
+        Desactiva el zoom con doble pulsación en un elemento de la pantalla, 
+        en este caso se desactiva en el botón de disparo para que pueda ser pulsado constantemente
+        */
+        .disable-dbl-tap-zoom {
+            touch-action: manipulation;
+        }
+
+    </style>
+  </head>
+  <body style="background-color: rgb(90, 0, 100);">
+    <div style="margin-left: 30px;">
+        <div>
+            <h3 id="titulo" >Fundamentos de tecnología de Videojuegos | by 
+                <a style="color: rgb(73, 186, 73); text-transform: uppercase;"> Borja Martínez Requena</a>
+                 | <a>DNI - 53902938T</a>
+            </h3>
+            <h1 >Space Invaders <a style="color: yellow; text-transform: uppercase;">Girocompleto</a></h1>
+            <div style="text-align: center;">
+                <fieldset style="border-color: yellow; display:inline">
+                    <legend>&nbsp;Defence of OUTER SPACE&nbsp;</legend>
+                    <div id="inputText" style=" margin: 20px; text-align: center; ">
+                        <label>Use <a style="color: red;">A</a> & <a style="color: red;">D</a> or <- & -> TO MOVE! &nbsp;</label>
+                        <label>&nbsp;&nbsp;Shot With <a style="color: red;">SPACEBARR!</a> &nbsp;</label>
+                        <label>&nbsp;&nbsp;TO RESTART -> press <a style="color: red;">F5</a> &nbsp;</label>
+                        <div>
+                            <label><a style="color: yellow;">[</a>Or use the <a style="color: red;">CONTROLS BELOW</a> for mobile use<a style="color: yellow;">]</a></label>
+                            <div>
+                                <label><a style="color: rgb(73, 186, 73);">ENJOY!</a></label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    
+    <div style="position: relative; text-align: center;">
+        <canvas id="world" style="z-index: 0;"></canvas>        
+        <canvas id="barriers" style="z-index: 1"></canvas>
+        <canvas id="enemies" style="z-index: 2"></canvas>
+        <canvas id="bullets" style="z-index: 3"></canvas>
+        <canvas id="ship" style="z-index: 4"></canvas>
+    </div>
+    <div style="text-align: center; margin-top: 630px;">
+        <input id="inputBarr" type="range" style="accent-color:yellow; width: 400px;" value="450" min="0" max="810" oninput="rangevalue.value=value"/>
+        <output id="rangevalue" style="color:yellow">360</output>
+        <div>
+            <input id="shot" class="disable-dbl-tap-zoom" type="image" src="img/shot.png" style="height: 15%; width: 15%; transform: rotate(90deg);" onclick="shotWithMobile();"/>
+        </div>
+    </div>    
+    <script src="script.js"></script>
+  </body>
+  </html>
